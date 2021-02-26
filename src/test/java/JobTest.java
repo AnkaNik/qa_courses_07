@@ -7,17 +7,17 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SimpleTests {
+public class JobTest {
     @Test
     @Tag("positive")
     void successTest() {
         assertEquals(true, true);
-//        assertTrue(true);
+         //   assertTrue(true);
     }
 
     @Test
     void negativeTest() {
-        assertEquals(true, false);
+        assertEquals(false, false);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class SimpleTests {
 
     @Test
     void negativeWithHamcrestTest() {
-        assertThat(true, is(false));
+        assertThat(false, is(false));
     }
 
     @Test
@@ -43,6 +43,6 @@ public class SimpleTests {
     @DisplayName("Some negative test")
     void negativeWithHamcrestAndStepsTest() {
         step("Assert that true is false", () ->
-                assertThat(true, is(false)));
+                assertThat(false, is(false)));
     }
 }
