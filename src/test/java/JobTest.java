@@ -17,7 +17,7 @@ public class JobTest {
 
     @Test
     void negativeTest() {
-        assertEquals(false, false);
+        assertEquals(true, false);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class JobTest {
 
     @Test
     void negativeWithHamcrestTest() {
-        assertThat(false, is(false));
+        assertThat(true, is(false));
     }
 
     @Test
@@ -43,6 +43,6 @@ public class JobTest {
     @DisplayName("Some negative test")
     void negativeWithHamcrestAndStepsTest() {
         step("Assert that true is false", () ->
-                assertThat(false, is(false)));
+                assertThat(true, is(false)));
     }
 }
